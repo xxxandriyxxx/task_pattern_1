@@ -16,7 +16,7 @@ public abstract class AbstractPizza {
     protected abstract void prepare(City city);
 
     public void bake() {
-        System.out.println("The pizza has been baked!!");
+        System.out.println("The pizza has been baked!");
     }
 
     public void cut() {
