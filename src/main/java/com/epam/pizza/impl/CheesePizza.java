@@ -7,13 +7,12 @@ import com.epam.pizza.SauceType;
 import com.epam.pizza.Topping;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class CheesePizza implements Pizza {
+public class CheesePizza extends AbstractPizza implements Pizza {
 
-    private List<Topping> toppings = new ArrayList<>();
-    private DoughType doughType;
-    SauceType sauceType;
+    public CheesePizza() {
+        toppings = new ArrayList<>();
+    }
 
     @Override
     public void prepare(City city) {
@@ -42,22 +41,15 @@ public class CheesePizza implements Pizza {
             doughType = DoughType.Thick;
             sauceType = SauceType.Marinara;
         }
-        System.out.println("Prepared!");
+        System.out.println("The pizza has been prepared!");
     }
 
     @Override
-    public void bake() {
-        System.out.println("Baked!");
-    }
-
-    @Override
-    public void cut() {
-        System.out.println("Cut!");
-
-    }
-
-    @Override
-    public void box() {
-        System.out.println("Boxed!");
+    public String toString() {
+        return "CheesePizza{" +
+                "toppings=" + toppings +
+                ", doughType=" + doughType +
+                ", sauceType=" + sauceType +
+                "}";
     }
 }
