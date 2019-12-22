@@ -6,12 +6,10 @@ import com.epam.pizza.Pizza;
 import com.epam.pizza.SauceType;
 import com.epam.pizza.Topping;
 
-import java.util.ArrayList;
-
 public class VeggiePizza extends AbstractPizza implements Pizza {
 
     public VeggiePizza() {
-        toppings = new ArrayList<>();
+        super();
     }
 
     @Override
@@ -37,7 +35,7 @@ public class VeggiePizza extends AbstractPizza implements Pizza {
             doughType = DoughType.Thick;
             sauceType = SauceType.Pesto;
         }
-        System.out.println("The pizza has been prepared!");
+        logger.trace("The pizza has been prepared!");
     }
 
     @Override
